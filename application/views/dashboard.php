@@ -22,13 +22,13 @@ $this->load->view('template/topbar');
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                  <img class="" src="<?php echo base_url('assets/img/mi.png')?>" alt="First slide">
+                  <img class="" src="<?php echo base_url('assets/img/mizam.png')?>" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="" src="<?php echo base_url('assets/img/guru.jpg')?>" alt="Second slide">
+                  <img class="" src="<?php echo base_url('assets/img/guru1.jpg')?>" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="" src="<?php echo base_url('assets/img/guru2.jpg')?>" alt="Third slide">
+                  <img class="" src="<?php echo base_url('assets/img/guru 2.jpg')?>" alt="Third slide">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

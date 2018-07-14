@@ -5,7 +5,10 @@ class Guru extends CI_Controller {
 
 	public function daftar_guru()
 	{
-		$query = $this->db->get('guru');
+		$query = $this->db
+					->order_by('urutan','ASC')
+					->order_by('nama','ASC')
+					->get('guru');
         $data['data_guru'] = $query;
 		$this->load->view('guru/index',$data);
 	}

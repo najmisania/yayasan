@@ -6,7 +6,7 @@ $this->load->view('template/topbar');
 <div class="col-lg-12">
               <div class="card">
                 <div class="card-header d-flex align-items-center">
-                  <h4>From Siswa Baru</h4>
+                  <h4>Edit Master Siswa </h4>
                 </div>
                 <div class="card-body">
                   <form class="form-horizontal" method="POST" action="<?php echo base_url('/index.php/siswa/update_siswa') ?>">

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/select2.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/jquery-ui.css')?>">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico')?>">
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/icon.png')?>">
         <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js')?>"></script>
     <script src="<?php echo base_url('assets/js/jquery-ui.js') ?>"></script>
     <script src="<?php echo base_url('assets/vendor/popper.js/umd/popper.min.js')?>"> </script>

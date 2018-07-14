@@ -29,7 +29,7 @@ $this->load->view('template/topbar');
                         </select>
                       </div>
                       <div class="col-sm-6">
-                       <input type="submit" class="form-control btn btn-success" value="Cetak" name="submit">
+                       <input type="submit" class="form-control btn btn-success" value="cetak" name="submit">
                      </div>
                   </form>
                 </div>
@@ -43,6 +43,7 @@ $this->load->view('template/topbar');
                           <th  width="12%">Tanggal Lahir</th>
                           <th  width="12%">Jenis Kelamin</th>
                           <th  width="12%">Jabatan</th>
+                          <th  width="12%">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -50,9 +51,16 @@ $this->load->view('template/topbar');
                         <tr>
                           <td><?php echo $value->nuptk  ?></td>
                           <td><?php echo $value->nama  ?></td>
-                          <td><?php echo $value->tgl_lahir  ?></td>
+                          <td><?php 
+                          $tgl = explode("-", $value->tgl_lahir);
+                          echo "$tgl[2]-$tgl[1]-$tgl[0]";  
+                           ?>
+                          </td>
                           <td><?php echo $value->jenis_kelamin  ?></td>
                           <td><?php echo $value->jabatan  ?></td>
+
+                          <td>
+                           <a href="<?php echo base_url('index.php/lapgaji/lihat_gaji/').$value->nuptk ?>" class=" btn btn-info btn-sm btn-block">Lihat Gaji</a></td>
                         </tr>
 <?php }  ?>
                       </tbody>

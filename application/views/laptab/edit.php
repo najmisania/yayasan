@@ -17,8 +17,8 @@ $this->load->view('template/topbar');
                       <div class="col-sm-4">
 
                         <select class="form-control" name="jenis_transaksi">
-                          <option value="masuk" <?php  $biodata->jenis_transaksi == 'masuk' ? ' selected="selected"' : '';?>>Masuk</option>
-                          <option value="keluar" <?php $biodata->jenis_transaksi == 'keluar' ? ' selected="selected"' : '';?>>Keluar</option>
+                          <option value="masuk" <?php if($biodata->jenis_transaksi=="masuk") echo 'selected' ?> >Masuk</option>
+                          <option value="keluar" <?php if($biodata->jenis_transaksi="keluar") echo 'selected' ?> >Keluar</option>
                         </select>
                       </div>
                       <label class="col-sm-2">Tanggal</label>

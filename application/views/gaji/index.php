@@ -35,7 +35,7 @@ $this->load->view('template/topbar');
                       
                          
                           <td>
-                           <a href="<?php echo base_url('index.php/gaji/edit/').$value->id ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></a>  <a href="<?php echo base_url('index.php/gaji/delete/').$value->id?>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                           <a href="<?php echo base_url('index.php/gaji/edit/').$value->id ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></a>  <a href="<?php echo base_url('index.php/gaji/delete/').$value->id.'/'.$value->nuptk ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
                           </td>
                         </tr>
 <?php }  ?>

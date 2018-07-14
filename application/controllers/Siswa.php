@@ -5,7 +5,10 @@ class Siswa extends CI_Controller {
 
 	public function daftar_siswa()
 	{
-		$query = $this->db->get('siswa');
+		$query = $this->db
+					->order_by('tingkat','ASC')
+					->order_by('nama','ASC')
+					->get('siswa');
         $data['data_siswa'] = $query;
 		$this->load->view('siswa/index',$data);
 	}
@@ -20,9 +23,6 @@ class Siswa extends CI_Controller {
 		echo "<pre>";
 		$date = explode("-", $_POST['tgl_lahir']);
 		$_POST['tgl_lahir'] = "$date[2]-$date[1]-$date[0]";
-		/*echo "<pre>";
-        print_r($date);
-        exit();*/
 		$this->db->insert('siswa',$_POST);
 		redirect('/siswa/daftar_siswa','refresh');
 		
@@ -39,7 +39,7 @@ class Siswa extends CI_Controller {
 		echo "<pre>";
 		$date = explode("-", $_POST['tgl_lahir']);
 		$_POST['tgl_lahir'] = "$date[2]-$date[1]-$date[0]";
-		print_r($_POST);
+		//print_r($_POST);
 		$this->db->replace('siswa',$_POST);
 		redirect('/siswa/daftar_siswa','refresh');
 	}

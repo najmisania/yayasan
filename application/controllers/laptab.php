@@ -5,7 +5,10 @@ class laptab extends CI_Controller {
 
 	public function pilih_siswa()
 	{
-		$query = $this->db->get('siswa');
+		$query = $this->db
+					->order_by('tingkat','ASC')
+					->order_by('nama','ASC')
+					->get('siswa');
         $data['data_siswa'] = $query;
 		$this->load->view('laptab/pilih_siswa',$data);
 	}

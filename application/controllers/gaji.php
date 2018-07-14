@@ -19,13 +19,13 @@ class gaji extends CI_Controller {
 	{
 		$query = $this->db->get('guru');
         $data['data_guru'] = $query;
-		$this->load->view('gaji/tambah',$data);
+		$this->load->view('gaji/tambah',$data,'refresh');
 	}
 	public function simpan_gaji()
 	{
 		echo "<pre>";
 		$this->db->insert('gaji',$_POST);
-		redirect('/gaji/lihat_gaji/'.$_POST['nuptk'], 'refresh');
+		redirect('/gaji/lihat_gaji/'.$_POST['nuptk'],'refresh');
 	}
 
 	public function lihat_gaji($nuptk)
@@ -35,34 +35,33 @@ class gaji extends CI_Controller {
 
 		$this->load->view('gaji/index',$data);
 	}
-	public function edit($id)
+	public function edit()
 	{
-
-		$sql = "SELECT * FROM guru t, gaji s WHERE t.nuptk = s.nuptk and id=$id";
-        $data['data']= $this->db->query($sql)->row();
-        // echo "<pre>";
+		$id = $this->uri->rsegment(3);
+		$sql = "SELECT * FROM gaji t, guru s WHERE t.nuptk = s.nuptk and t.id='$id'";
+		// echo $sql;
+        $data['data_gaji']= $this->db->query($sql)->row();
         // print_r($data);
         // exit;
-		$this->load->view('gaji/edit',$data);
+
+		$this->load->view('gaji/edit',$data,'refresh');
 	}
-	public function update_gaji($id)
+	public function update_gaji()
 	{
 		echo "<pre>";
-		print_r($_POST);
-		$sql = "UPDATE gaji set bulan='$_POST[bulan]', gaji_pokok='$_POST[gaji_pokok]', tunjangan_jab='$_POST[tunjangan_jab]', masa_kerja='$_POST[masa_kerja]', jumlah_pel='$_POST[jumlah_pel]', jumlah_hadir='$_POST[jumlah_hadir]' where id='$_POST[id]'";
+		// print_r($_POST);
+		$sql = "UPDATE `gaji` SET bulan = '$_POST[bulan]', gaji_pokok='$_POST[gaji_pokok]',tunjangan_jab=$_POST[tunjangan_jab], masa_kerja=$_POST[masa_kerja], jumlah_pel=$_POST[jumlah_pel],jumlah_hadir=$_POST[jumlah_hadir] WHERE id = '$_POST[id]' ";
 		$this->db->query($sql);
-		echo "<pre>";
-        print_r($sql);
-        exit;
-		echo $sql;
-		$this->db->replace('gaji',$_POST);
-		redirect('/gaji/daftar_gaji/'.$_POST['id'],'refresh');
+		// echo $sql;
+		// exit;
+		redirect("/gaji/lihat_gaji/".$_POST['nuptk'],'refresh');
 	}
+
 	public function delete()
 	{
 		$id = $this->uri->rsegment(3);
 		$nuptk = $this->uri->rsegment(4);
         $this->db->where('id',$id)->delete('gaji');
-        redirect('/gaji/lihat_gaji/'.$id,'refresh');
+        redirect('/gaji/lihat_gaji/'.$nuptk,'refresh');
 	}
 }
