@@ -7,6 +7,7 @@ $this->load->view('template/topbar');
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
+                  <h4 colspan="3"><?php echo $biodata[0]->nama ?></h4>
                 </div> 
                 <div class="card-body">
                   <div class="table-responsive">
