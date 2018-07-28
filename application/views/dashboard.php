@@ -9,7 +9,6 @@ $this->load->view('template/topbar');
     <div class="row d-flex align-items-md-stretch">
       <div class="content-wrapper" style="min-height: 574px;">
         
-
         <section class="content-header">
           <h1> 
               Informasi MI Ziyadatul Ahsan 

@@ -40,7 +40,9 @@ class laptab extends CI_Controller {
 		$nis = $this->uri->rsegment(3);
         $data['data_laptab'] = $this->db->where('nis',$nis)->get('tabungan');
         $data['biodata']     = $this->db->where('nis',$nis)->get('siswa')->row();
+        // echo "<pre>";
         // print_r($data);
+        // exit;
 		$this->load->view('laptab/index',$data);
 
 	}

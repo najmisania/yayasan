@@ -3,7 +3,6 @@ $this->load->view('template/head');
 $this->load->view('template/sidebar');
 $this->load->view('template/topbar');
 ?>
-
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
@@ -47,5 +46,4 @@ $this->load->view('template/topbar');
               </div>
             </div>
 <?php
-
 ?>

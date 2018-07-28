@@ -23,7 +23,9 @@ class lapgaji extends CI_Controller {
         $nuptk = $this->uri->rsegment(3);
         $data['data_lapgaji'] = $this->db->where('nuptk',$nuptk)->get('gaji');
         $data['biodata']      = $this->db->where('nuptk',$nuptk)->get('guru')->result();
+        // echo "<pre>";
         // print_r($data);
+        // exit;
         $this->load->view('lapgaji/index',$data);
 
   }

@@ -3,7 +3,6 @@ $this->load->view('template/head');
 $this->load->view('template/sidebar');
 $this->load->view('template/topbar');
 ?>
-
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
@@ -11,8 +10,7 @@ $this->load->view('template/topbar');
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
-                      <thead>
-                        
+                      <thead>                      
                         <tr>
                           <th  width="12%">Bulan</th>
                           <th  width="12%">Gaji Pokok</th>
@@ -32,8 +30,6 @@ $this->load->view('template/topbar');
                           <td><?php echo $value->masa_kerja ?></td>
                           <td><?php echo $value->jumlah_pel ?></td>
                           <td><?php echo $value->jumlah_hadir ?></td>
-                      
-                         
                           <td>
                            <a href="<?php echo base_url('index.php/gaji/edit/').$value->id ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></a>  <a href="<?php echo base_url('index.php/gaji/delete/').$value->id.'/'.$value->nuptk ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
                           </td>
@@ -46,5 +42,4 @@ $this->load->view('template/topbar');
               </div>
             </div>
 <?php
-
 ?>

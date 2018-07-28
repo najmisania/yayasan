@@ -3,7 +3,6 @@ $this->load->view('template/head');
 $this->load->view('template/sidebar');
 $this->load->view('template/topbar');
 ?>
-
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
@@ -32,8 +31,7 @@ $this->load->view('template/topbar');
                              $tgl = explode("-", $value->tgl_lahir);
                              echo "$tgl[2]-$tgl[1]-$tgl[0]";  
                              ?></td>
-                          <td><?php echo $value->tingkat  ?></td>
-                         
+                          <td><?php echo $value->tingkat  ?></td>         
                           <td>
                            <a href="<?php echo base_url('index.php/laptab/lihat_laptab/').$value->nis ?>" class=" btn btn-info btn-sm">Lihat Tabungan</a>
                            <br></br>
@@ -48,5 +46,4 @@ $this->load->view('template/topbar');
               </div>
             </div>
 <?php
-
 ?>

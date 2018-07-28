@@ -61,9 +61,7 @@ $this->load->view('template/footer');
    $( function() {
     $( "#tgl_lahir" ).datepicker({ dateFormat: 'dd-mm-yy' });
   } );
-</script>
-          
+</script>    
 <?php
 $this->load->view('template/footer');
-
 ?>

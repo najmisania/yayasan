@@ -55,7 +55,6 @@ $this->load->view('template/topbar');
             </div>
 <?php
 $this->load->view('template/footer');
-
 ?>
 <script type="text/javascript">
    $( function() {
