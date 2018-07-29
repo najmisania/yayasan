@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class laptab extends CI_Controller {
+class Laptab extends CI_Controller {
 
 	public function pilih_siswa()
 	{
@@ -9,8 +9,8 @@ class laptab extends CI_Controller {
 					->order_by('tingkat','ASC')
 					->order_by('nama','ASC')
 					->get('siswa');
-        $data['data_siswa'] = $query;
-		$this->load->view('laptab/pilih_siswa',$data);
+         $data['data_siswa'] = $query;
+	 $this->load->view('laptab/pilih_siswa',$data);
 	}
 	public function daftar_laptab()
 	{

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class lapinfaq extends CI_Controller {
+class Lapinfaq extends CI_Controller {
 
 	public function pilih_siswa()
 	{
@@ -178,7 +178,7 @@ echo '</table>';
 $html = ob_get_contents();
         ob_end_clean();
         $pdf->WriteHTML(utf8_encode($html));
-        $pdf->Output(); // save to file because we c
+        $pdf->Output('file.pdf','D'); // save to file because we c
 
 	}
 	public function cetak_siswa()

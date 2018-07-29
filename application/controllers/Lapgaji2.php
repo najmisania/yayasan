@@ -5,36 +5,45 @@ class lapgaji extends CI_Controller {
 
 	public function pilih_guru()
 	{
-		    $query = $this->db
-          ->order_by('urutan','ASC')
-          ->order_by('nama','ASC')
-          ->get('guru');
+		$query = $this->db->get('guru');
         $data['data_guru'] = $query;
-		    $this->load->view('lapgaji/pilih_guru',$data);
+		$this->load->view('lapgaji/pilih_guru',$data);
 	}
-  public function daftar_gaji()
-  {
-        $query = $this->db->get('gaji');
-        $data['data_lapgaji'] = $query;
-        $this->load->view('lapgaji/index',$data);
-  }
-  public function lihat_gaji()
-  {
-        $nuptk = $this->uri->rsegment(3);
+	public function daftar_tabungan()
+	{
+		$query = $this->db->get('gaji');
+        $data['data_gaji'] = $query;
+		$this->load->view('lapgaji/index',$data);
+	}
+	public function tambah_gaji()
+	{
+		$query = $this->db->get('guru');
+        $data['data_guru'] = $query;
+		$this->load->view('lapgaji/tambah',$data);
+	}
+	public function simpan_gaji()
+	{
+		echo "<pre>";
+		$date = explode("-", $_POST['tanggal']);
+		$_POST['tanggal'] = "$date[2]-$date[1]-$date[0]";
+		// print_r($_POST);
+		$this->db->insert('gaji',$_POST);
+		 redirect('/gaji/lihat_lapgaji/'.$_POST['nuptk'], 'refresh');
+	}
+	public function lihat_gaji()
+	{
+		$nuptk = $this->uri->rsegment(3);
         $data['data_lapgaji'] = $this->db->where('nuptk',$nuptk)->get('gaji');
         $data['biodata']      = $this->db->where('nuptk',$nuptk)->get('guru')->result();
-        // echo "<pre>";
         // print_r($data);
-        // exit;
-        $this->load->view('lapgaji/index',$data);
+		$this->load->view('lapgaji/index',$data);
 
-  }
+	}
+
 	public function cetak_gaji()
 	{
 		$nuptk = $this->uri->rsegment(3);
-		$sql = "SELECT * FROM gaji, guru where gaji.nuptk = guru.nuptk and gaji.bulan='$_POST[bulan]' ORDER BY guru.urutan ASC";
-    // echo $sql;
-    // exit;
+		$sql = "SELECT * FROM gaji, guru where gaji.nuptk = guru.nuptk ORDER BY gaji.urutan,gaji.nuptk ASC";
         $datagaji = $this->db->query($sql)->result_array();
 
         // echo "<pre>";
