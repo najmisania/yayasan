@@ -44,7 +44,6 @@ $this->load->view('template/topbar');
               </div>
             </div>
 <?php
-$this->load->view('template/footer');
 
 
 ?>
