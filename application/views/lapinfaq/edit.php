@@ -17,18 +17,18 @@ $this->load->view('template/topbar');
                       <label class="col-sm-2">Bulan</label>
                       <div class="col-sm-4">
                         <select class="form-control" name="bulan">
-                          <option value="juli">Juli</option>
-                          <option value="agustus">Agustus</option>
-                          <option value="september">September</option>
-                          <option value="oktober">Oktober</option>
-                          <option value="november">November</option>
-                          <option value="desember">Desember</option>
-                          <option value="januari">Januari</option>
-                          <option value="februari">Februari</option>
-                          <option value="maret">Maret</option>
-                          <option value="april">April</option>
-                          <option value="mei">Mei</option>
-                          <option value="juni">Juni</option>
+                          <option <?php if(trim($data->bulan)=="juli") echo "selected" ?> value="juli">Juli</option>
+                          <option <?php if(trim($data->bulan)=="agustus") echo "selected" ?> value="agustus">Agustus</option>
+                          <option <?php if(trim($data->bulan)=="september") echo "selected" ?> value="september">September</option>
+                          <option <?php if(trim($data->bulan)=="oktober") echo "selected" ?> value="oktober">Oktober</option>
+                          <option <?php if(trim($data->bulan)=="november") echo "selected" ?> value="november">November</option>
+                          <option <?php if(trim($data->bulan)=="desember") echo "selected" ?> value="desember">Desember</option>
+                          <option <?php if(trim($data->bulan)=="januari") echo "selected" ?> value="januari">Januari</option>
+                          <option <?php if(trim($data->bulan)=="februari") echo "selected" ?> value="februari">Februari</option>
+                          <option <?php if(trim($data->bulan)=="maret") echo "selected" ?> value="maret">Maret</option>
+                          <option <?php if(trim($data->bulan)=="april") echo "selected" ?> value="april">April</option>
+                          <option <?php if(trim($data->bulan)=="mei") echo "selected" ?> value="mei">Mei</option>
+                          <option <?php if(trim($data->bulan)=="juni") echo "selected" ?> value="juni">Juni</option>
                           
                         </select>
                       </div>

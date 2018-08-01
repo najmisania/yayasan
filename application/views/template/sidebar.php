@@ -28,7 +28,7 @@
                 <li><a href="<?php echo base_url('index.php/lapinfaq/pilih_siswa')?>">Infaq</a></li>
                 <li><a href="<?php echo base_url('index.php/lapgaji/pilih_guru')?>">Gaji Guru</a></li>
               </ul>
-              <li><a href="<?php echo site_url('login') ?>"> <i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+              <li><a href="<?php echo site_url('login/logout') ?>"> <i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
             </li>
           </ul>
         </div>

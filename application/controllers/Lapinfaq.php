@@ -176,7 +176,8 @@ class Lapinfaq extends CI_Controller {
 
 echo '</table>';
 $html = ob_get_contents();
-        ob_end_clean();
+        
+ob_end_clean();
         $pdf->WriteHTML(utf8_encode($html));
         $pdf->Output('file.pdf','D'); // save to file because we c
 

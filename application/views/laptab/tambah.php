@@ -51,7 +51,7 @@ $this->load->view('template/topbar');
                     <div class="form-group row">
                       <label class="col-sm-2">Admin</label>
                       <div class="col-sm-4">
-                        <input type="text" name="username" class="form-control" value="Titi" readonly>
+                        <input type="text" name="username" class="form-control" value="<?php echo $_SESSION['username'] ?>" readonly>
                       </div>
                     </div>
                     <div class="form-group row">       
