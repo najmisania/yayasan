@@ -53,7 +53,7 @@ class tabungan extends CI_Controller {
 		$nis = $this->uri->rsegment(3);
         $this->db->where('nis',$nis)->delete('tabungan');
         $this->daftar_tabungan($nis);
-        redirect('/tabungan/daftar_tabungan','refresh');
+        redirect('/tabungan/lihat_tabungan/'.$nis,'refresh');
 	}
 	public function update_tabungan()
 	{

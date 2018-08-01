@@ -39,7 +39,7 @@ class Guru extends CI_Controller {
 		echo "<pre>";
 		$date = explode("-", $_POST['tgl_lahir']);
 		$_POST['tgl_lahir'] = "$date[2]-$date[1]-$date[0]";
-		print_r($_POST);
+		// print_r($_POST);
 		$this->db->replace('guru',$_POST);
 		redirect('/guru/daftar_guru','refresh');
 	}
