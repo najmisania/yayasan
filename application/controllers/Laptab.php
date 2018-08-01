@@ -112,20 +112,19 @@ class Laptab extends CI_Controller {
 	{
 		$nis = $this->uri->rsegment(3);
 		$sql = "SELECT * FROM tabungan t, siswa s WHERE t.nis = s.nis and t.id='$nis'";
-		echo $sql;
+		// echo $sql;
         $data['biodata']= $this->db->query($sql)->row();
         //konversi tanggal sql menjadi tanggal indonesia
         $date = explode("-", $data['biodata']->tanggal);
-        print_r($date);
+        // print_r($date);
         $data['biodata']->tanggal = "$date[2]-$date[1]-$date[0]";
-        print_r($data);
-
+    
 		$this->load->view('laptab/edit',$data);
 	}
 	public function update_laptab()
 	{
-		echo "<pre>";
-		print_r($_POST);
+		// echo "<pre>";
+		// print_r($_POST);
 		$date = explode("-", $_POST['tanggal']);
 		$tanggal = "$date[2]-$date[1]-$date[0]";
 		//print_r($_POST);
