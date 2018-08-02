@@ -9,13 +9,24 @@ $this->load->view('template/topbar');
                 <div class="card-header d-flex align-items-center">
                   <h4>Edit Infaq</h4>
                 </div>
-                <div class="card-body d-flex align-items-center">
-                  <?php echo $data->nama ?>
-                </div>
+
                 <div class="card-body">
                   <form class="form-horizontal" method="post" action="<?php echo base_url('index.php/lapinfaq/update_infaq')?>">
                     <input type="hidden" name="id" value="<?php echo $data->id ?>">
                     <input type="hidden" name="nis" value="<?php echo $data->nis ?>">
+
+                    <div class="form-group row">
+                      <label class="col-sm-2">Nama</label>
+                      <div class="col-sm-4">
+                        <div class="input-group">
+                            <input type="text" name="nominal" value=" <?php echo $data->nama ?>" class="form-control" readonly>
+                          </div>
+                      </div>
+                      <label class="col-sm-2">Admin</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="username" class="form-control" value="<?php echo $data->username ?>" readonly>
+                      </div>
+                    </div>
                     <div class="form-group row">
                       <label class="col-sm-2">Bulan</label>
                       <div class="col-sm-4">
@@ -51,13 +62,10 @@ $this->load->view('template/topbar');
                     </div>
 
                     <div class="form-group row">
-                      <label class="col-sm-2">Admin</label>
-                      <div class="col-sm-4">
-                        <input type="text" name="username" class="form-control" value="<?php echo $data->username ?>" readonly>
-                      </div>
+                      
                     </div>
                     <div class="form-group row">       
-                      <div class="col-sm-10 offset-sm-2">
+                      <div class="col-sm-10 ">
                         <input type="submit" value="submit" class="btn btn-primary">
                       </div>
                     </div>
