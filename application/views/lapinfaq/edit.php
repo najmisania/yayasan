@@ -37,7 +37,12 @@ $this->load->view('template/topbar');
                         <input id="tanggal" type="text" name="tanggal" value="<?php echo $data->tanggal ?>" class="form-control datepicker">
                       </div>
                     </div>
-
+										<div class="form-group row">
+                      <label class="col-sm-2">Nama</label>
+                      <div class="col-sm-4">
+                        <input id="inputHorizontalWarning" type="text" name="nama" placeholder="Masukan Nama" value="<?php echo $data->nama ?>" disabled class="form-control"><small class="form-text"></small>
+                      </div>
+                    </div>
                     <div class="form-group row">
                       <label class="col-sm-2">Nominal</label>
                       <div class="col-sm-4">
