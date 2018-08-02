@@ -38,9 +38,9 @@ $this->load->view('template/topbar');
                       </div>
                     </div>
 										<div class="form-group row">
-                      <label class="col-sm-2">Nama</label>
+                      <label class="col-sm-2">NIS</label>
                       <div class="col-sm-4">
-                        <input id="inputHorizontalWarning" type="text" name="nama" placeholder="Masukan Nama" value="<?php echo $data->nama ?>" disabled class="form-control"><small class="form-text"></small>
+                        <input id="inputHorizontalWarning" type="text" name="nama" placeholder="Masukan Nama" value="<?php echo $data->nis ?>" disabled class="form-control"><small class="form-text"></small>
                       </div>
                     </div>
                     <div class="form-group row">
