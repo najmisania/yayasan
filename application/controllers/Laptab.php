@@ -130,7 +130,7 @@ class Laptab extends CI_Controller {
 		//print_r($_POST);
 		$sql = "UPDATE `tabungan` SET tanggal = '$tanggal', jenis_transaksi='$_POST[jenis_transaksi]',nominal=$_POST[nominal] WHERE id = '$_POST[id]' ";
 		$this->db->query($sql);
-		redirect("/laptab/daftar_laptab/".$_POST['nis'],'refresh');
+		redirect("/laptab/lihat_laptab/".$_POST['nis'],'refresh');
 	}
 
 	public function delete()
@@ -138,6 +138,6 @@ class Laptab extends CI_Controller {
 		$id = $this->uri->rsegment(3);
 		$nis = $this->uri->rsegment(4);
         $this->db->where('id',$id)->delete('tabungan');
-        redirect('/laptab/daftar_laptab/'.$nis,'refresh');
+        redirect('/laptab/lihat_laptab/'.$nis,'refresh');
 	}
 }
