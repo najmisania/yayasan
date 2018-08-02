@@ -16,18 +16,6 @@ $this->load->view('template/topbar');
                     <input type="hidden" name="nis" value="<?php echo $data->nis ?>">
 
                     <div class="form-group row">
-                      <label class="col-sm-2">Nama</label>
-                      <div class="col-sm-4">
-                        <div class="input-group">
-                            <input type="text" name="nominal" value=" <?php echo $data->nama ?>" class="form-control" readonly>
-                          </div>
-                      </div>
-                      <label class="col-sm-2">Admin</label>
-                      <div class="col-sm-4">
-                        <input type="text" name="username" class="form-control" value="<?php echo $data->username ?>" readonly>
-                      </div>
-                    </div>
-                    <div class="form-group row">
                       <label class="col-sm-2">Bulan</label>
                       <div class="col-sm-4">
                         <select class="form-control" name="bulan">
@@ -49,6 +37,15 @@ $this->load->view('template/topbar');
                       <label class="col-sm-2">Tanggal</label>
                       <div class="col-sm-2">
                         <input id="tanggal" type="text" name="tanggal" value="<?php echo $data->tanggal ?>" class="form-control datepicker">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label class="col-sm-2">Nama</label>
+                      <div class="col-sm-4">
+                        <div class="input-group">
+                            <input type="text" name="nominal" value=" <?php echo $data->nama ?>" class="form-control" readonly>
+                          </div>
                       </div>
                     </div>
                     <div class="form-group row">
