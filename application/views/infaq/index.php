@@ -30,7 +30,7 @@ $this->load->view('template/topbar');
                               $tgl = explode("-", $value->tanggal);
                              echo "$tgl[2]-$tgl[1]-$tgl[0]";
                              ?>
-                              /td>
+                              </td>
                           <td><?php echo $value->nominal  ?></td>
                           <td><?php echo $value->nis  ?></td>
                           
