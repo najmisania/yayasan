@@ -9,6 +9,9 @@ $this->load->view('template/topbar');
                 <div class="card-header d-flex align-items-center">
                   <h4>Edit Infaq</h4>
                 </div>
+                <div class="card-body d-flex align-items-center">
+                  <?php echo $data->nama ?>
+                </div>
                 <div class="card-body">
                   <form class="form-horizontal" method="post" action="<?php echo base_url('index.php/lapinfaq/update_infaq')?>">
                     <input type="hidden" name="id" value="<?php echo $data->id ?>">

@@ -36,7 +36,7 @@ class Lapinfaq extends CI_Controller {
 	public function edit($id)
 	{
 
-		$sql = "SELECT * from infaq where id=$id";
+		$sql = "SELECT * from infaq, siswa where infaq.nis=siswa.nis and infaq.id=$id";
 
         $data['data']= $this->db->query($sql)->row();
         $date = explode("-", $data['data']->tanggal);

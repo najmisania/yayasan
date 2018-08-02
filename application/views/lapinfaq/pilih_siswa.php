@@ -44,10 +44,10 @@ $this->load->view('template/topbar');
                         <tr>
                           <td><?php echo $value->nis  ?></td>
                           <td><?php echo $value->nama  ?></td>
-                          <td><?php 
-                          $tgl = explode("-", $value->tgl_lahir);
-                          echo "$tgl[2]-$tgl[1]-$tgl[0]";  
-                           ?></td>
+                          <td><?php
+                              $tgl = explode("-", $value->tgl_lahir);
+                             echo "$tgl[2]-$tgl[1]-$tgl[0]";
+                             ?></td>
                           <td><?php echo $value->tingkat  ?></td>
                          
                           <td>
