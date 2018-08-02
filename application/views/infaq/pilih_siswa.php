@@ -27,7 +27,11 @@ $this->load->view('template/topbar');
 <?php                 foreach ($data_siswa->result() as $key => $value) {   ?>
                         <tr>
                           <td><?php echo $value->bulan ?></td>
-                          <td><?php echo $value->tanggal  ?></td>
+                          <td><?php
+                              $tgl = explode("-", $value->tanggal);
+                             echo "$tgl[2]-$tgl[1]-$tgl[0]";
+                             ?>
+                              </td>
                           <td><?php echo $value->nominal  ?></td>
                           <td><?php echo $value->nis  ?></td>
                          
