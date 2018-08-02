@@ -15,7 +15,6 @@ $this->load->view('template/topbar');
                         <tr>
                           <th  width="20%">NIS</th>
                           <th  width="12%">Tanggal</th>
-                          <th  width="12%">Mutasi</th>
                           <th  width="12%">Nominal</th>
                           <th  width="12%">Aksi</th>
                         </tr>
@@ -29,7 +28,6 @@ $this->load->view('template/topbar');
                              echo " $tgl[2]-$tgl[1]-$tgl[0]";  
                              ?>
                           </td>
-                          <td><?php echo $value->jenis_transaksi ?></td>
                           <td><?php echo $value->nominal  ?></td>                   
                           <td>
                            <a href="<?php echo base_url('index.php/laptab/edit/').$value->id ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></a>
